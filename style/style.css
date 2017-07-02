@@ -1,0 +1,59 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+//transition: all 0.5s ease-in;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+}
+
+
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	/* Required to make elements draggable in old WebKit */
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+}
+
+body {
+	background: lightgray;
+}
+#blocks {
+	position: relative;
+}
+
+.block {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	margin: 25px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.block.invisible {
+	display: inline-block;
+	width: 250px;
+	height: 250px;
+	background: none;
+	border: none;
+	z-index: -1;
+}
+
+.block.over {
+	border: 2px dashed gray;
+}
